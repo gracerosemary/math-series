@@ -18,26 +18,24 @@ def lucas(n):
     else:
         return (lucas(n-1)+lucas(n-2))
 
-def sum_series(n, x = 'optionOne', y = 'optionTwo'):
+def sum_series(n, x = 0, y = 1):
+    
+    defaultArgs = [
+        x == 0,
+        y == 1
+        ]
     
     optionalArgs = [
         x == 2,
         y == 1
         ]
         
-    invertArgs = [
-        x == 1,
-        y == 2,
-        ]
-        
-    diffSeries = [
-        x != 2,
-        y != 1
-        ]
-
     if all(optionalArgs):
         return lucas(n)
-    elif not any(invertArgs) and any(diffSeries) and not any(optionalArgs):
+    elif all(defaultArgs):
         return fibonacci(n)
-    elif any(invertArgs) or any(diffSeries):
+    else:
         return "different series"
+
+
+# attribution: short circuit eval - https://www.djm.org.uk/posts/python-multiple-line-conditions-and-all-builtin/
