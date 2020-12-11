@@ -1,7 +1,7 @@
 # Lab: Class 02 - Modules and Testing
 
 _Author: Grace Choi_  
-PR link: https://github.com/gracerosemary/math-series/compare/lab2?expand=1 
+PR link: https://github.com/gracerosemary/math-series/pull/1
 
 ---
 
